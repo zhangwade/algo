@@ -36,7 +36,7 @@ function isPalindrome(SingleLinkedList $list)
         $pre = $slow;
         $slow = $remainNode;
     }
-    // 链表长度为偶数的情况
+    // 不计头结点(哨兵结点), 链表长度为奇数的情况
     if ($fast != null) {
         $slow = $slow->next;
     }
