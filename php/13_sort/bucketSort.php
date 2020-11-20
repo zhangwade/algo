@@ -32,6 +32,9 @@ function bucketSort(array $numbers) {
     
     $result = [];
     for($i=0;$i<$bucketNumber;$i++) {
+        if (!isset($buckets[$i])) {
+            continue;
+        }
         $bucket = $buckets[$i];
         $length = count($bucket);
         //如果桶内元素为空，跳过这个桶
